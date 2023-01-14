@@ -23,7 +23,8 @@ export class MediaPlayer {
     this.media.paused ? this.media.play() : this.media.pause();
   }
 
-  // toggleMute() {}
-
+  toggleMute() {
+    this.media.muted = !this.media.muted;
+  }
   // setVolume() {}
 }
