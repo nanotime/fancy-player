@@ -3,12 +3,12 @@ export interface Plugin {
 }
 
 interface Conf {
-  el: HTMLVideoElement;
+  el: HTMLMediaElement;
   plugins?: Plugin[];
 }
 
 export class MediaPlayer {
-  media: HTMLVideoElement | null;
+  media: HTMLMediaElement;
 
   constructor(config: Conf) {
     this.media = config.el;
@@ -19,9 +19,11 @@ export class MediaPlayer {
     plugins.forEach(plugin => plugin.run(this));
   }
 
-  togglePlay() {}
+  togglePlay() {
+    this.media.paused ? this.media.play() : this.media.pause();
+  }
 
-  toggleMute() {}
+  // toggleMute() {}
 
-  setVolume() {}
+  // setVolume() {}
 }
