@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/style.css" />
+  <title>Fancy Player</title>
+</head>
+
+<body>
+  <div id="app">
+
+    <main>
+      <header>
+        <h1>Big buck bunny</h1>
+      </header>
+
+      <section class="player">
+        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png" class="video" crossorigin="anonymous"></video>
+
+        <div class="controls">
+          <div class="left-btns">
+            <button id="play-pause">
+              <span class="material-icons">play_arrow</span>
+            </button>
+
+            <div class="volume-container">
+              <input type="range" name="volume" id="volume" min="0" max="100" value="80" />
+            </div>
+          </div>
+
+          <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+          </div>
+
+          <div class="right-btns">
+            <button id="autoplay">AutoPlay</button>
+
+            <button id="full-screen">
+              <span class="material-icons">fullscreen</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>

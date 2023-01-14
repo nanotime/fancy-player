@@ -1,0 +1,48 @@
+@import url(./styles/reset.css);
+@import url(./styles/font-icons.css);
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  width: 80%;
+}
+
+.video {
+  width: 100%;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  width: 100%;
+  height: 35px;
+}
+
+.left-btns {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.progress-bar {
+  width: 14%;
+  height: 8px;
+  background-color: red;
+}
+
+.right-btns {
+  display: flex;
+  gap: 4px;
+}
