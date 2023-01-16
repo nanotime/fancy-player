@@ -1,5 +1,5 @@
 import { MediaPlayer } from './Player';
-import { playPauseHandler, muteHandler } from './handlers';
+import { playPauseHandler, muteHandler, volumeHandler } from './handlers';
 
 // Base conf
 const mediaNode = document.querySelector('video') as HTMLMediaElement;
@@ -19,6 +19,10 @@ const btnFullScreen = document.querySelector(
 // Event handling
 btnPlay.addEventListener('click', () => playPauseHandler(player, btnPlay));
 btnMute.addEventListener('click', () => muteHandler(player, btnMute));
-volumeRange.addEventListener('change', () => console.log(volumeRange.value));
+volumeRange.addEventListener('change', () =>
+  volumeHandler(player, volumeRange)
+);
 btnAutoPlay.addEventListener('click', ev => console.log(ev));
 btnFullScreen.addEventListener('click', ev => console.log(ev));
+
+mediaNode.addEventListener('progress', ev => console.log(ev));

@@ -26,5 +26,8 @@ export class MediaPlayer {
   toggleMute() {
     this.media.muted = !this.media.muted;
   }
-  // setVolume() {}
+
+  setVolume(amount: number) {
+    this.media.volume = amount;
+  }
 }
