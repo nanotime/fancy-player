@@ -14,6 +14,7 @@ main {
 
 .video {
   width: 100%;
+  object-fit: cover;
 }
 
 /* Controls */
@@ -36,10 +37,26 @@ main {
   height: 100%;
 }
 
-.progress-bar {
-  width: 14%;
+progress {
   height: 8px;
-  background-color: red;
+  width: 100%;
+}
+
+progress[value] {
+  appearance: none; /* Needed for Safari */
+  border: none; /* Needed for Firefox */
+  color: #e52e71; /* Fallback to a solid color */
+}
+
+/* WebKit styles */
+progress[value]::-webkit-progress-value {
+  background-image: linear-gradient(to right, #ff8a00, #e52e71);
+  transition: width 1s linear;
+}
+
+/* Firefox styles */
+progress[value]::-moz-progress-bar {
+  background-image: -moz-linear-gradient(right, #ff8a00, #e52e71);
 }
 
 .right-btns {

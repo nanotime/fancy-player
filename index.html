@@ -19,35 +19,41 @@
       </header>
 
       <section class="player">
-        <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-          poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png" class="video" crossorigin="anonymous"></video>
+        <figure>
+          <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png" class="video" crossorigin="anonymous"></video>
+          <figcaption class="controls">
+            <div class="left-btns">
+              <button id="play-pause">
+                <span class="material-icons">play_arrow</span>
+              </button>
+              <button id="mute">
+                <span class="material-icons">
+                  volume_up
+                </span>
+              </button>
+              <div class="volume-container">
+                <input type="range" name="volume" id="volume" min="0" max="100" value="80" />
+              </div>
+            </div>
+
+            <div class="progress-bar-container">
+              <progress id="progress" max="100" value="0"></progress>
+              <label id="timer" for="progress" role="timer"></label>
+            </div>
+
+            <div class="right-btns">
+              <button id="auto-play">AutoPlay</button>
+
+              <button id="full-screen">
+                <span class="material-icons">fullscreen</span>
+              </button>
+            </div>
+          </figcaption>
+        </figure>
 
         <div class="controls">
-          <div class="left-btns">
-            <button id="play-pause">
-              <span class="material-icons">play_arrow</span>
-            </button>
-            <button id="mute">
-              <span class="material-icons">
-                volume_up
-              </span>
-            </button>
-            <div class="volume-container">
-              <input type="range" name="volume" id="volume" min="0" max="100" value="80" />
-            </div>
-          </div>
 
-          <div class="progress-bar-container">
-            <div class="progress-bar"></div>
-          </div>
-
-          <div class="right-btns">
-            <button id="auto-play">AutoPlay</button>
-
-            <button id="full-screen">
-              <span class="material-icons">fullscreen</span>
-            </button>
-          </div>
         </div>
       </section>
     </main>
