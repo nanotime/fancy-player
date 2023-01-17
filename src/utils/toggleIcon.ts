@@ -22,8 +22,6 @@ export function toggleIcon({
   toggleIcon,
   condition,
 }: Args) {
-  // Clean the icon
-  target.innerText = '';
   // Toggle on condition
   target.innerText = condition ? defaultIcon : toggleIcon;
 }

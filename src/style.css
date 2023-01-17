@@ -1,15 +1,26 @@
 @import url(./styles/reset.css);
 @import url(./styles/font-icons.css);
+@import url(./styles/controls.css);
+
+:root {
+  --black: #000;
+  --white: #f8f4ea;
+  --grey: #ccc;
+  --progress-init: #ff8a00;
+  --progress-end: #e52e71;
+}
 
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 .player {
   width: 80%;
+  position: relative;
 }
 
 .video {
@@ -17,49 +28,6 @@ main {
   object-fit: cover;
 }
 
-/* Controls */
-.controls {
-  display: flex;
-  width: 100%;
-  height: 35px;
-}
-
-.left-btns {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.progress-bar-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-progress {
-  height: 8px;
-  width: 100%;
-}
-
-progress[value] {
-  appearance: none; /* Needed for Safari */
-  border: none; /* Needed for Firefox */
-  color: #e52e71; /* Fallback to a solid color */
-}
-
-/* WebKit styles */
-progress[value]::-webkit-progress-value {
-  background-image: linear-gradient(to right, #ff8a00, #e52e71);
-  transition: width 1s linear;
-}
-
-/* Firefox styles */
-progress[value]::-moz-progress-bar {
-  background-image: -moz-linear-gradient(right, #ff8a00, #e52e71);
-}
-
-.right-btns {
-  display: flex;
-  gap: 4px;
+.hidden {
+  display: none;
 }

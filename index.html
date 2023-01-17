@@ -12,28 +12,27 @@
 
 <body>
   <div id="app">
-
     <main>
-      <header>
-        <h1>Big buck bunny</h1>
-      </header>
-
       <section class="player">
         <figure>
-          <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png" class="video" crossorigin="anonymous"></video>
+          <video class="video" crossorigin="anonymous" poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png"
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+
           <figcaption class="controls">
+
             <div class="left-btns">
-              <button id="play-pause">
+              <button id="play-pause" class="btn">
                 <span class="material-icons">play_arrow</span>
               </button>
-              <button id="mute">
+
+              <button id="mute" class="btn">
                 <span class="material-icons">
                   volume_up
                 </span>
               </button>
+
               <div class="volume-container">
-                <input type="range" name="volume" id="volume" min="0" max="100" value="80" />
+                <input type="range" name="volume" id="volume" min="0" max="100" value="80" class="hidden" />
               </div>
             </div>
 
@@ -43,18 +42,32 @@
             </div>
 
             <div class="right-btns">
-              <button id="auto-play">AutoPlay</button>
 
-              <button id="full-screen">
+              <button class="btn btn-settings"><span class="material-icons">settings</span></button>
+
+              <form class="settings hidden">
+                <div class="settings_option">
+                  <label for="autopause-visibility" class="switch">
+                    <input type="checkbox" name="autopause-visibility" id="autopause-visibility">
+                    <span class="switch__slider"></span>
+                  </label>
+                  <span>Auto pause on lost visibility</span>
+                </div>
+
+                <div class="settings_option">
+                  <label for="autopause-scroll" class="switch">
+                    <input type="checkbox" name="autopause-scroll" id="autopause-scroll">
+                    <span class="switch__slider"></span>
+                  </label>
+                  <span>Auto pause on scroll down</span>
+                </div>
+              </form>
+              <!-- <button id="full-screen">
                 <span class="material-icons">fullscreen</span>
-              </button>
+              </button> -->
             </div>
           </figcaption>
         </figure>
-
-        <div class="controls">
-
-        </div>
       </section>
     </main>
 
