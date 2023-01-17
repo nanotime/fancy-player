@@ -11,9 +11,9 @@
 }
 
 main {
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
 }
@@ -30,4 +30,30 @@ main {
 
 .hidden {
   display: none;
+}
+
+.comments {
+  width: 80%;
+  padding: 12px 0;
+}
+
+.comment {
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px 1px rgba(51, 51, 51, 0.5);
+}
+
+.comment header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
