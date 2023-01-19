@@ -40,3 +40,6 @@ Nodes.volumeRange.addEventListener('mouseout', function () {
 Nodes.mediaNode.addEventListener('timeupdate', () =>
   handlers.handleProgress({ player, ...Nodes })
 );
+
+Nodes.fastForward.addEventListener('click', () => player.fastForward());
+Nodes.fastRewind.addEventListener('click', () => player.fastRewind());

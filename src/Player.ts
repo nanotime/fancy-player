@@ -40,4 +40,20 @@ export class MediaPlayer {
   setVolume(amount: number) {
     this.media.volume = amount;
   }
+
+  fastForward() {
+    const totalTime = this.media.currentTime + 10;
+    if (totalTime < this.media.duration) {
+      this.media.currentTime = totalTime;
+    }
+  }
+
+  fastRewind() {
+    const totalTime = this.media.currentTime - 10;
+    if (totalTime >= 0) {
+      this.media.currentTime = totalTime;
+    } else {
+      this.media.currentTime = 0;
+    }
+  }
 }

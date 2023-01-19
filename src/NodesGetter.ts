@@ -7,6 +7,8 @@ export default class AppNodes {
   settingsBtn: HTMLButtonElement;
   settings: NodeListOf<HTMLInputElement>;
   mediaNode: HTMLMediaElement;
+  fastForward: HTMLButtonElement;
+  fastRewind: HTMLButtonElement;
 
   constructor() {
     this.btnPlay = document.querySelector('#play-pause') as HTMLButtonElement;
@@ -23,5 +25,11 @@ export default class AppNodes {
       '.settings .setting-option'
     ) as NodeListOf<HTMLInputElement>;
     this.mediaNode = document.querySelector('video') as HTMLMediaElement;
+    this.fastForward = document.querySelector(
+      '#fast-forward'
+    ) as HTMLButtonElement;
+    this.fastRewind = document.querySelector(
+      '#fast-rewind'
+    ) as HTMLButtonElement;
   }
 }
