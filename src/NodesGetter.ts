@@ -1,3 +1,9 @@
+/**
+ * Superclass that get all the selectors needed for the app
+ *
+ * @export
+ * @class AppNodes
+ */
 export default class AppNodes {
   btnPlay: HTMLButtonElement;
   btnMute: HTMLButtonElement;

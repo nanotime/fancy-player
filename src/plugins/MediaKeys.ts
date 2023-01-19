@@ -11,6 +11,12 @@ const toggleIconConf = {
   toggleIcon: IconNames.play,
 };
 
+/**
+ * Plugin that adds keyboard management to the player
+ *
+ * @export
+ * @class MediaKeys
+ */
 export class MediaKeys {
   player: MediaPlayer | undefined;
   container: HTMLElement;
