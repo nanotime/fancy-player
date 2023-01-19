@@ -1,5 +1,5 @@
 import { MediaPlayer } from './Player';
-import { AutoPause } from './plugins';
+import { AutoPause, MediaKeys } from './plugins';
 import AppNodes from './NodesGetter';
 import * as handlers from './handlers';
 
@@ -7,7 +7,10 @@ import * as handlers from './handlers';
 const Nodes = new AppNodes();
 const player = new MediaPlayer({
   el: Nodes.mediaNode,
-  plugins: [new AutoPause({ button: Nodes.btnPlay })],
+  plugins: [
+    new AutoPause({ button: Nodes.btnPlay }),
+    new MediaKeys({ container: Nodes.mediaContainer, button: Nodes.btnPlay }),
+  ],
 });
 
 // Event handling
@@ -41,5 +44,6 @@ Nodes.mediaNode.addEventListener('timeupdate', () =>
   handlers.handleProgress({ player, ...Nodes })
 );
 
+// Fast forward / rewind
 Nodes.fastForward.addEventListener('click', () => player.fastForward());
 Nodes.fastRewind.addEventListener('click', () => player.fastRewind());

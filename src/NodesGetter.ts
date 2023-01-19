@@ -9,6 +9,7 @@ export default class AppNodes {
   mediaNode: HTMLMediaElement;
   fastForward: HTMLButtonElement;
   fastRewind: HTMLButtonElement;
+  mediaContainer: HTMLElement;
 
   constructor() {
     this.btnPlay = document.querySelector('#play-pause') as HTMLButtonElement;
@@ -31,5 +32,6 @@ export default class AppNodes {
     this.fastRewind = document.querySelector(
       '#fast-rewind'
     ) as HTMLButtonElement;
+    this.mediaContainer = document.querySelector('.player') as HTMLMapElement;
   }
 }
