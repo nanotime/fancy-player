@@ -1,25 +1,25 @@
-import { MediaPlayer } from '../Player';
 import { IconNames, toggleIcon } from '../utils';
+import { BaseHandlerProps } from './index';
 
 /**
- * Handles the play pause event on button
+ * Play/Pause the player and changes the icon depending on the state
  *
  * @export
- * @param {MediaPlayer} player
- * @param {HTMLButtonElement} target
+ * @param {BaseHandlerProps} props
+ * @param {HTMLButtonElement} [current] - refers to the element being target of the event
  */
 export function playPauseHandler(
-  player: MediaPlayer,
-  target: HTMLButtonElement
+  props: BaseHandlerProps,
+  current?: HTMLButtonElement
 ) {
-  const icon = target.querySelector('span') as HTMLElement;
+  const icon = current?.querySelector('span') as HTMLElement;
 
-  player.togglePlay();
+  props.player.togglePlay();
 
   toggleIcon({
     target: icon,
     defaultIcon: IconNames.play,
     toggleIcon: IconNames.paused,
-    condition: player.media.paused,
+    condition: props.player.media.paused,
   });
 }

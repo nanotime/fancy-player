@@ -1,14 +1,16 @@
-import { MediaPlayer } from '../Player';
+import { BaseHandlerProps } from './index';
 
-export function handleProgress(
-  player: MediaPlayer,
-  timer: HTMLLabelElement,
-  progressBar: HTMLProgressElement
-) {
+/**
+ * Updates the progress bar and time
+ *
+ * @export
+ * @param {BaseHandlerProps} props
+ */
+export function handleProgress(props: BaseHandlerProps) {
   const {
     media: { duration, currentTime },
-  } = player;
+  } = props.player;
   const current = (currentTime / duration) * 100;
-  progressBar.value = current;
-  timer.innerHTML = `${Math.round(currentTime)}s`;
+  props.progressBar.value = current;
+  props.timer.innerHTML = `${Math.round(currentTime)}s`;
 }

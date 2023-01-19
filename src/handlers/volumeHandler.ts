@@ -1,13 +1,16 @@
-import { MediaPlayer } from '../Player';
+import { BaseHandlerProps } from './index';
 
 /**
- * Handle the volume of player
+ * Changes the player volume
  *
  * @export
- * @param {MediaPlayer} player
- * @param {HTMLInputElement} target
+ * @param {BaseHandlerProps} props
+ * @param {HTMLInputElement} [current] - refers to the element being target of the event
  */
-export function volumeHandler(player: MediaPlayer, target: HTMLInputElement) {
-  const amount = Number(target.value) / 100;
-  player.setVolume(amount);
+export function volumeHandler(
+  props: BaseHandlerProps,
+  current?: HTMLInputElement
+) {
+  const amount = Number(current?.value) / 100;
+  props.player.setVolume(amount);
 }

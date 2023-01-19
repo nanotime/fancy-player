@@ -9,6 +9,9 @@
   --progress-init: #ff8a00;
   --progress-end: #e52e71;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 main {
   margin-top: 12px;

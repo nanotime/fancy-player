@@ -1,22 +1,25 @@
-import { MediaPlayer } from '../Player';
 import { IconNames, toggleIcon } from '../utils';
+import { BaseHandlerProps } from './index';
 
 /**
- * Toggle mute on button click
+ * Mute/unmute the player and changes the icon depending on the state
  *
  * @export
- * @param {MediaPlayer} player
- * @param {HTMLButtonElement} target
+ * @param {BaseHandlerProps} props
+ * @param {HTMLButtonElement} [current] - refers to the element being target of the event
  */
-export function muteHandler(player: MediaPlayer, target: HTMLButtonElement) {
-  const icon = target.querySelector('span') as HTMLElement;
+export function muteHandler(
+  props: BaseHandlerProps,
+  current?: HTMLButtonElement
+) {
+  const icon = current?.querySelector('span') as HTMLElement;
 
-  player.toggleMute();
+  props.player.toggleMute();
 
   toggleIcon({
     target: icon,
     defaultIcon: IconNames.volumeOff,
     toggleIcon: IconNames.volumeUp,
-    condition: player.media.muted,
+    condition: props.player.media.muted,
   });
 }

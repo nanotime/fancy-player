@@ -9,14 +9,24 @@ interface Conf {
 
 export class MediaPlayer {
   media: HTMLMediaElement;
+  plugins: Plugin[] | undefined;
 
   constructor(config: Conf) {
     this.media = config.el;
-    this.runPlugins(config.plugins);
+    this.plugins = config.plugins;
+    this.runPlugins();
   }
 
-  private runPlugins(plugins: Plugin[] = []) {
-    plugins.forEach(plugin => plugin.run(this));
+  private runPlugins() {
+    this.plugins?.forEach(plugin => plugin.run(this));
+  }
+
+  play() {
+    this.media?.play();
+  }
+
+  pause() {
+    this.media?.pause();
   }
 
   togglePlay() {

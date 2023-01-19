@@ -1,0 +1,1 @@
+export { AutoPause } from './AutoPause';
