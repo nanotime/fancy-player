@@ -11,184 +11,203 @@
 </head>
 
 <body>
-  <div id="app">
-    <main>
-      <section class="player" tabindex="1">
-        <figure>
-          <video class="video" crossorigin="anonymous" poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png"
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
+  <nav>
+    <p>This is a didactic project made with &#10084; by Javier Marin.</p>
 
-          <figcaption class="controls">
+    <ul>
+      <li>
+        <a href="/src/pages/about-es.html">
+          Read about this
+          <span class="material-icons">format_quote</span>
+        </a>
+      </li>
+      <li>
+        <a href="/" title="Check my code on github">
+          My code
+          <span class="material-icons">
+            code
+          </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <section class="player" tabindex="1">
+      <figure>
+        <video class="video" crossorigin="anonymous" poster="./assets/Big_Buck_Bunny_thumbnail_vlc.png"
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video>
 
-            <div class="left-btns">
-              <button id="play-pause" class="btn">
-                <span class="material-icons">play_arrow</span>
-              </button>
+        <figcaption class="controls">
 
-              <button id="mute" class="btn">
-                <span class="material-icons">
-                  volume_up
-                </span>
-              </button>
+          <div class="left-btns">
+            <button id="play-pause" class="btn">
+              <span class="material-icons">play_arrow</span>
+            </button>
 
-              <div class="volume-container">
-                <input type="range" name="volume" id="volume" min="0" max="100" value="80" class="hidden" />
-              </div>
+            <button id="mute" class="btn">
+              <span class="material-icons">
+                volume_up
+              </span>
+            </button>
+
+            <div class="volume-container">
+              <input type="range" name="volume" id="volume" min="0" max="100" value="80" class="hidden" />
             </div>
+          </div>
 
-            <div class="progress-bar-container">
-              <progress id="progress" max="100" value="0"></progress>
-              <label id="timer" for="progress" role="timer"></label>
-            </div>
+          <div class="progress-bar-container">
+            <progress id="progress" max="100" value="0"></progress>
+            <label id="timer" for="progress" role="timer"></label>
+          </div>
 
-            <div class="right-btns">
-              <button class="btn" id="fast-rewind">
-                <span class="material-icons">fast_rewind</span>
-              </button>
-              <button class="btn" id="fast-forward">
-                <span class="material-icons">fast_forward</span>
-              </button>
-            </div>
-          </figcaption>
-        </figure>
-      </section>
+          <div class="right-btns">
+            <button class="btn" id="fast-rewind">
+              <span class="material-icons">fast_rewind</span>
+            </button>
+            <button class="btn" id="fast-forward">
+              <span class="material-icons">fast_forward</span>
+            </button>
+            <button class="btn" id="full-screen">
+              <span class="material-icons">fullscreen</span>
+            </button>
+          </div>
+        </figcaption>
+      </figure>
+    </section>
 
-      <section class="comments">
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/sheavatar.jpg" alt="avatar">
-            </figure>
-            <h3>Jane Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/sheavatar.jpg" alt="avatar">
-            </figure>
-            <h3>Jane Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/sheavatar.jpg" alt="avatar">
-            </figure>
-            <h3>Jane Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/sheavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-        <article class="comment">
-          <header>
-            <figure>
-              <img src="./assets/heavatar.jpg" alt="avatar">
-            </figure>
-            <h3>John Doe</h3>
-          </header>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
-            corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
-            blanditiis?
-          </p>
-        </article>
-      </section>
-    </main>
-
-    <footer></footer>
-  </div>
+    <section class="comments">
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/sheavatar.jpg" alt="avatar">
+          </figure>
+          <h3>Jane Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/sheavatar.jpg" alt="avatar">
+          </figure>
+          <h3>Jane Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/sheavatar.jpg" alt="avatar">
+          </figure>
+          <h3>Jane Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/sheavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+      <article class="comment">
+        <header>
+          <figure>
+            <img src="./assets/heavatar.jpg" alt="avatar">
+          </figure>
+          <h3>John Doe</h3>
+        </header>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, quaerat provident quis, quidem veniam
+          corrupti ad laborum iure earum quod, magnam voluptatum cumque nisi temporibus distinctio atque iste ullam
+          blanditiis?
+        </p>
+      </article>
+    </section>
+  </main>
   <script type="module" src="/src/main.ts"></script>
 </body>
 

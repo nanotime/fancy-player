@@ -96,6 +96,7 @@
 
 progress {
   background-color: var(--white);
+  cursor: pointer;
   height: 8px;
   width: 100%;
 }

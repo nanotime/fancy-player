@@ -44,6 +44,17 @@ Nodes.mediaNode.addEventListener('timeupdate', () =>
   handlers.handleProgress({ player, ...Nodes })
 );
 
+Nodes.progressBar.addEventListener('click', function (ev) {
+  const pos = (ev.offsetX / this.offsetWidth) * player.media.duration;
+  player.media.currentTime = pos;
+});
+
 // Fast forward / rewind
 Nodes.fastForward.addEventListener('click', () => player.fastForward());
 Nodes.fastRewind.addEventListener('click', () => player.fastRewind());
+
+// Full screen
+Nodes.fullScreenBtn.addEventListener('click', () => {
+  if (!document.fullscreenElement) Nodes.mediaContainer.requestFullscreen();
+  else document.exitFullscreen();
+});

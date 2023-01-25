@@ -25,17 +25,22 @@ export class MediaKeys {
   constructor({ container, button }: PluginConfig) {
     this.container = container;
     this.button = button.querySelector('span') as HTMLElement;
-    this.onEnter = this.onEnter.bind(this);
+    this.onSpace = this.onSpace.bind(this);
     this.onLeftArrow = this.onLeftArrow.bind(this);
     this.onRightArrow = this.onRightArrow.bind(this);
   }
 
   public run(player: MediaPlayer) {
     this.player = player;
-    this.container.addEventListener('keyup', ({ code }) => {
-      if (code === 'Enter') this.onEnter();
-      if (code === 'ArrowLeft') this.onLeftArrow();
-      if (code === 'ArrowRight') this.onRightArrow();
+    document.addEventListener('keydown', ev => {
+      if (ev.code === 'Space') {
+        ev.preventDefault();
+        this.onSpace();
+      }
+
+      if (ev.code === 'ArrowLeft') this.onLeftArrow();
+
+      if (ev.code === 'ArrowRight') this.onRightArrow();
     });
 
     this.container.querySelector('video')?.addEventListener('click', () => {
@@ -48,7 +53,7 @@ export class MediaKeys {
     });
   }
 
-  private onEnter() {
+  private onSpace() {
     toggleIcon({
       ...toggleIconConf,
       target: this.button,
